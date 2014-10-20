@@ -24,6 +24,7 @@
   "homepage": "https://github.com/ppizarro/boilerplate-gulp-angular",
   "devDependencies": {
     "gulp": "^3.8.8",
+    "gulp-angular-templatecache": "^1.4.2",
     "gulp-jscs": "^1.2.0",
     "gulp-jshint": "^1.8.5",
     "gulp-load-plugins": "^0.7.0",
@@ -35,6 +36,7 @@
   "paths": {
     "tmp": "./tmp/",
     "build": "./build/",
-    "js": "./src/client/app/**/*.js"
+    "js": "./src/app/**/*.js",
+    "htmltemplates": "./src/app/**/*.html"
   }
 }
