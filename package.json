@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate-gulp-angular",
+  "version": "0.1.0",
+  "description": "A starter project for AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install & bower install",
+    "start": "gulp clean && gulp build && gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ppizarro/boilerplate-gulp-angular.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "angularjs",
+    "gulp"
+  ],
+  "author": "Paulo Pizarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ppizarro/boilerplate-gulp-angular/issues"
+  },
+  "homepage": "https://github.com/ppizarro/boilerplate-gulp-angular",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-jscs": "^1.2.0",
+    "gulp-jshint": "^1.8.5",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-task-listing": "^0.3.0",
+    "jshint-stylish": "^1.0.0",
+    "require-dir": "^0.1.0"
+  },
+  "paths": {
+    "tmp": "./tmp/",
+    "build": "./build/",
+    "js": "./src/client/app/**/*.js"
+  }
+}
