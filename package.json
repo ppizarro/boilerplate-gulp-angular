@@ -28,6 +28,7 @@
     "gulp-jscs": "^1.2.0",
     "gulp-jshint": "^1.8.5",
     "gulp-load-plugins": "^0.7.0",
+    "gulp-minify-html": "^0.1.6",
     "gulp-rimraf": "^0.1.1",
     "gulp-task-listing": "^0.3.0",
     "jshint-stylish": "^1.0.0",
