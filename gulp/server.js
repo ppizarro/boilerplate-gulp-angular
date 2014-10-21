@@ -39,14 +39,14 @@ function browserSyncInit(baseDir, files, browser) {
 
 gulp.task('serve', ['watch'], function () {
   browserSyncInit([
-    'src/app',
+    'src',
     '.tmp'
   ], [
     'src/app/*.html',
-    '.tmp/styles/**/*.css',
-    'src/app/scripts/**/*.js',
-    'src/app/partials/**/*.html',
-    'src/app/images/**/*'
+    'src/app/content/**/*.css',
+    'src/app/**/*.js',
+    'src/app/**/*.html',
+    'src/app/content/images/**/*'
   ]);
 });
 
