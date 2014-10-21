@@ -51,9 +51,19 @@ gulp.task('html', ['analyze', 'templatecache'], function () {
     .pipe(gulp.dest(pkg.paths.build));
 });
 
+gulp.task('images', function() {
+  return gulp.src('src/content/images/**/*')
+    .pipe(plug.imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest(pkg.paths.build + 'content/images'));
+});
+
 gulp.task('clean', function (cb) {
   del([pkg.paths.tmp, pkg.paths.build], cb);
 });
 
-gulp.task('build', ['html']);
+gulp.task('build', ['html', 'images']);
 
