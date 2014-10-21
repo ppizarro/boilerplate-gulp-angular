@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var plug = require('gulp-load-plugins')();
 var pkg = require('../package.json');
 var saveLicense = require('uglify-save-license');
+var del = require('del');
 
 gulp.task('help', plug.taskListing);
 
@@ -50,9 +51,8 @@ gulp.task('html', ['analyze', 'templatecache'], function () {
     .pipe(gulp.dest(pkg.paths.build));
 });
 
-gulp.task('clean', function () {
-  return gulp.src([pkg.paths.tmp, pkg.paths.build], { read: false })
-    .pipe(plug.rimraf());
+gulp.task('clean', function (cb) {
+  del([pkg.paths.tmp, pkg.paths.build], cb);
 });
 
 gulp.task('build', ['html']);
