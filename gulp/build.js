@@ -5,6 +5,7 @@ var plug = require('gulp-load-plugins')();
 var pkg = require('../package.json');
 var saveLicense = require('uglify-save-license');
 var del = require('del');
+var mainBowerFiles = require('main-bower-files');
 
 gulp.task('help', plug.taskListing);
 
@@ -61,9 +62,21 @@ gulp.task('images', function() {
     .pipe(gulp.dest(pkg.paths.build + 'content/images'));
 });
 
+gulp.task('fonts-vendor', function () {
+
+  return  gulp.src(mainBowerFiles())
+    .pipe(plug.filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe(gulp.dest(pkg.paths.build + 'content/fonts'));
+});
+
+gulp.task('fonts', ['fonts-vendor'], function () {
+  return gulp.src('src/content/fonts')
+    .pipe(gulp.dest(pkg.paths.build + 'content/fonts'));
+});
+
 gulp.task('clean', function (cb) {
   del([pkg.paths.tmp, pkg.paths.build], cb);
 });
 
-gulp.task('build', ['html', 'images']);
+gulp.task('build', ['html', 'images', 'fonts']);
 
