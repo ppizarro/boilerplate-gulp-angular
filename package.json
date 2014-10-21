@@ -51,6 +51,8 @@
     "tmp": "./.tmp/",
     "build": "./build/",
     "js": "./src/app/**/*.js",
+    "images": "./src/content/images/**/*",
+    "fonts": "./src/content/fonts/**/*.{eot,svg,ttf,woff}",
     "htmltemplates": "./src/app/**/*.html"
   }
 }

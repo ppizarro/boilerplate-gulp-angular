@@ -53,7 +53,7 @@ gulp.task('html', ['analyze', 'templatecache'], function () {
 });
 
 gulp.task('images', function() {
-  return gulp.src('src/content/images/**/*')
+  return gulp.src(pkg.paths.images)
     .pipe(plug.imagemin({
       optimizationLevel: 3,
       progressive: true,
@@ -70,7 +70,7 @@ gulp.task('fonts-vendor', function () {
 });
 
 gulp.task('fonts', ['fonts-vendor'], function () {
-  return gulp.src('src/content/fonts')
+  return gulp.src(pkg.paths.fonts)
     .pipe(gulp.dest(pkg.paths.build + 'content/fonts'));
 });
 
