@@ -44,15 +44,13 @@
     "jshint-stylish": "^1.0.0",
     "main-bower-files": "^2.1.0",
     "require-dir": "^0.1.0",
-    "uglify-save-license": "^0.4.1"
+    "uglify-save-license": "^0.4.1",
+    "wiredep": "^1.8.6"
   },
   "paths": {
     "tmp": "./.tmp/",
     "build": "./build/",
     "js": "./src/app/**/*.js",
     "htmltemplates": "./src/app/**/*.html"
-  },
-  "dependencies": {
-    "wiredep": "^1.8.6"
   }
 }
